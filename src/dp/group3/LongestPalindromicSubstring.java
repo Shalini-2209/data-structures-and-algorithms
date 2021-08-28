@@ -9,6 +9,7 @@ public class LongestPalindromicSubstring {
 
     private static int findLCS(String a, String b, int n, int m) {
         int dp[][] = new int[n+1][m+1];
+        int max = Integer.MIN_VALUE;
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
@@ -16,8 +17,9 @@ public class LongestPalindromicSubstring {
                     dp[i][j] = 1 + dp[i-1][j-1];
                 else
                     dp[i][j] = 0;
+                max = Math.max(max, dp[i][j]);
             }
         }
-        return dp[n][m];
+        return max;
     }
 }
