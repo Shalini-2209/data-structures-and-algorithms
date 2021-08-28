@@ -6,7 +6,7 @@ public class LongestPalindromicSubstring {
         StringBuilder rev = new StringBuilder(a);
         System.out.println(findLCS(a, rev.reverse().toString(), a.length(), a.length()));
     }
-
+    // Edited
     private static int findLCS(String a, String b, int n, int m) {
         int dp[][] = new int[n+1][m+1];
         int max = Integer.MIN_VALUE;
