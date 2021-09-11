@@ -10,8 +10,7 @@ public class MaxOfSA {
     public static void main(String[] args) {
         int arr[] = {1, 3, 2, 5,9,1};
         int k = 3;
-        System.out.println(Integer.parseInt("100", 8));
-//        findMax(arr, k);
+        findMax(arr, k);
     }
 
     private static void findMax(int[] arr, int k) {
