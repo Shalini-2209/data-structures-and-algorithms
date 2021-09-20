@@ -3,16 +3,6 @@ package trees;
 import java.util.Stack;
 
 public class InorderTraversal {
-    static class Node {
-        int data;
-        Node left, right;
-
-        Node(int val){
-            data = val;
-            left = right = null;
-        }
-    }
-
 
     public static void main(String[] args) {
 
