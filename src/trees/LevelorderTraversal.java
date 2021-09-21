@@ -19,6 +19,7 @@ public class LevelorderTraversal {
     }
 
     private static void printLevelOrderTraversal(Node root) {
+        if(root == null) return;
         Queue<Node> q = new LinkedList<>();
         q.add(root);
 
