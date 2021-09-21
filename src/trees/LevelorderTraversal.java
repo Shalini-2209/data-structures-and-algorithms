@@ -2,6 +2,7 @@ package trees;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class LevelorderTraversal {
     public static void main(String[] args) {
@@ -15,7 +16,27 @@ public class LevelorderTraversal {
         root.right.left.right = new Node(8);
 
         // Breadth first traversal
+        System.out.println("Level order traversal");
         printLevelOrderTraversal(root);
+        System.out.println("\nReverse level order traversal ");
+        printReverseLevelOrder(root);
+    }
+
+    private static void printReverseLevelOrder(Node root) {
+        Queue<Node> q = new LinkedList<>();
+        Stack<Node> stk = new Stack<>();
+
+        q.offer(root);
+
+        while (!q.isEmpty()){
+            root = q.poll();
+            stk.push(root);
+            if(root.left != null) q.offer(root.left);
+            if(root.right != null) q.offer(root.right);
+        }
+
+        while (!stk.isEmpty())
+            System.out.print(stk.pop().data + " ");
     }
 
     private static void printLevelOrderTraversal(Node root) {
