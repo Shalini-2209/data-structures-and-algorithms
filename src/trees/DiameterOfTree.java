@@ -1,5 +1,7 @@
 package trees;
 
+// Height based problems
+
 public class DiameterOfTree {
     static int max;
     public static void main(String[] args) {
