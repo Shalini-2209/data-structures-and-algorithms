@@ -13,8 +13,8 @@ public class IdenticalTrees {
     }
 
     private static boolean isIdentical(Node p, Node q) {
-        if(p == null || q == null)  return (p == q);
+        if(p == null && q == null)  return true;
 
-        return p.data == q.data && isIdentical(p.left, q.left) && isIdentical(p.right, q.right);
+        else return p.data == q.data && isIdentical(p.left, q.left) && isIdentical(p.right, q.right);
     }
 }
